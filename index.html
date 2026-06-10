@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo">AgroSustentável</div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#simulador">Simulador</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>A produção que alimenta o mundo em perfeita harmonia com a preservação do meio ambiente.</p>
+            <a href="#simulador" class="btn">Conheça o Impacto</a>
+        </div>
+    </section>
+
+    <section id="pilares" class="section">
+        <h2>Nossos Pilares</h2>
+        <div class="cards-container">
+            <div class="card" onclick="mostrarDetalhes('tecnologia')">
+                <h3>Tecnologia No Campo</h3>
+                <p>Uso de drones e IA para otimizar o uso de água e insumos.</p>
+            </div>
+            <div class="card" onclick="mostrarDetalhes('preservacao')">
+                <h3>Preservação</h3>
+                <p>Práticas de rotação de culturas e manejo direto do solo.</p>
+            </div>
+            <div class="card" onclick="mostrarDetalhes('energia')">
+                <h3>Energia Limpa</h3>
+                <p>Fazendas movidas a energia solar e biomassa.</p>
+            </div>
+        </div>
+        <div id="painel-detalhes" class="detalhes hidden">
+            <p id="texto-detalhe">Clique em um pilar para saber mais.</p>
+        </div>
+    </section>
+
+    <section id="simulador" class="section bg-light">
+        <h2>Simulador de Impacto Verde</h2>
+        <p>Veja a diferença que a tecnologia sustentável faz em 1 hectare de plantação:</p>
+        
+        <div class="simulador-box">
+            <label for="tecnologia-seletor">Escolha uma prática:</label>
+            <select id="tecnologia-seletor" onchange="atualizarSimulador()">
+                <option value="tradicional">Agricultura Tradicional</option>
+                <option value="precisao">Agricultura de Precisão</option>
+                <option value="regenerativa">Agricultura Regenerativa</option>
+            </select>
+
+            <div class="resultados">
+                <div class="resultado-item">
+                    <span>Economia de Água:</span>
+                    <strong id="agua">0%</strong>
+                </div>
+                <div class="resultado-item">
+                    <span>Crédito de Carbono:</span>
+                    <strong id="carbono">Neutro</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Projeto para Repositório GitHub.</p>
+    </footer>
